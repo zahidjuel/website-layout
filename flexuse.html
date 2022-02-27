@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/5c051ae14e.js" crossorigin="anonymous"></script>
+    <title>Flexuse</title>
+</head>
+<style>
+    nav a {
+        text-decoration: none;
+        font-size: 1.5em;
+        margin-right: 15px;
+        color: black;
+    }
+
+    .login-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .login-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .login-form input,
+    button {
+        font-size: 1.3em;
+        margin-top: 15px;
+        padding-left: 10px;
+        border: 1px solid lightgray;
+        border-radius: 5px;
+    }
+
+    .login-form button {
+        background-color: orange;
+        color: whitesmoke;
+        font-weight: 700;
+        padding: 5px;
+        border: none;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+    }
+</style>
+
+<body>
+    <nav>
+        <span>
+            <a href="">Home</a>
+            <a href="">Contact</a>
+            <a href="">News</a>
+            <a href="">About</a>
+        </span>
+        <span>
+            <a href=""><i class="fa-solid fa-user" title="profile"></i></a>
+        </span>
+
+    </nav>
+    <section class="login-container">
+        <form action="" class="login-form">
+            <h2>Login</h2>
+            <input type="email" name="email" id="" placeholder="Enter your email" required>
+            <input type="password" name="password" id="" placeholder="Enter password" required>
+            <button type="submit">Login</button>
+        </form>
+    </section>
+</body>
+
+</html>
