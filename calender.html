@@ -8,48 +8,107 @@
     <title>Calender</title>
 </head>
 <style>
+    *{
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+    }
     .calender {
-        border: 2px solid green;
-        height: 500px;
+        width: 250px;
+        height: 250px;
+        position: relative;
+        overflow: hidden;
         display: grid;
         grid-template-columns: repeat(7, 1fr);
-        grid-template-rows: 2em repeat(5, 1fr);
-        grid-gap: 1em;
+        grid-template-rows:  repeat(6, 1fr);
+        grid-gap: 10px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.01), 0 1px 3px rgba(0,0,0,0.01);
     }
 
     .date,
     .day {
-        border: 1px solid lightgrey;
-        border-radius: 10px;
-        background-color: lightslategrey;
-        font-size: 3em;
         display: flex;
         justify-content: center;
         align-items: center;
+        border-radius: 50%;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.01), 0 1px 2px rgba(0,0,0,0.01);
+        transition: .3s linear;
+    }
+    .day{
+        background-color: wheat;
+    }
+    .s::after{
+        content: "Sunday";
+        position: absolute;
+        left: 0px;
+        bottom: 100%;    
     }
 
-    .other-month,
-    .day {
-        background-color: lightgray;
+    .m::after{
+        content: "Monday";
+        position: absolute;
+        left: 30px;
+        bottom:100%;  
+    }
+    .t::after{
+        content: "Tuesday";
+        position: absolute;
+        left: 60px;
+        bottom:100%;  
+    }
+    .w::after{
+        content: "Wednesday";
+        position: absolute;
+        left: 90px;
+        bottom:100%;  
+    }
+    .th::after{
+        content: "Thursday";
+        position: absolute;
+        left: 130px;
+        bottom:100%;  
+    }
+    .f::after{
+        content: "Friday";
+        position: absolute;
+        left: 165px;
+        bottom:100%;  
+    }
+    .sa::after{
+        content: "Satarday";
+        position: absolute;
+        left: 195px;
+        bottom:100%;  
     }
 
-    .day {
-        font-size: 1em;
+    .day:hover.s::after,.day:hover.m::after,.day:hover.t::after,.day:hover.w::after,.day:hover.th::after, .day:hover.f::after, .day:hover.sa::after{
+        bottom: 70%;
+        padding: 6px;
+        font-size: 12px;
+        font-weight: 500;
+        border-radius: 4px;
+        color: #fff;
+        background-color: #555;
+    }
+
+    .date:hover{
+    background-color: #f1f1f1;
+    cursor: pointer;
     }
 </style>
 
 <body>
-    <h1>Explore Calender using Flexbox & Grid</h1>
+    <h1>March 2022</h1>
     <div class="calender">
-        <div class="day">S</div>
-        <div class="day">M</div>
-        <div class="day">T</div>
-        <div class="day">W</div>
-        <div class="day">T</div>
-        <div class="day">F</div>
-        <div class="day">S</div>
-        <div class="date other-month">29</div>
-        <div class="date other-month">30</div>
+        <div class="day s">S</div>
+        <div class="day m">M</div>
+        <div class="day t">T</div>
+        <div class="day w">W</div>
+        <div class="day th">T</div>
+        <div class="day f">F</div>
+        <div class="day sa">S</div>
+        <div class="date">29</div>
+        <div class="date">30</div>
         <div class="date">1</div>
         <div class="date">2</div>
         <div class="date">3</div>
@@ -81,8 +140,8 @@
         <div class="date">29</div>
         <div class="date">30</div>
         <div class="date">31</div>
-        <div class="date other-month">1</div>
-        <div class="date other-month">2</div>
+        <div class="date">1</div>
+        <div class="date ">2</div>
     </div>
 </body>
 
